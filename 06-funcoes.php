@@ -29,6 +29,15 @@ function dadoAutor(){
         <h4>Outra chamada</h4>
         <?=dadoAutor()?>
     </article>
+
+    <h2>Função com retorno de dados</h2>
+    <?php
+    function dadosCurso(){
+        //return "Técnico em Informatica para Internet";
+        return "<b>No WhatsApp</b>";
+    }
+    ?>
+    <p>Estamos no curso de <?=dadosCurso()?> é ministrado no Senac Penha.</p>
     
     
 </section>

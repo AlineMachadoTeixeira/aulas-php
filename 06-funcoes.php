@@ -126,10 +126,25 @@ function dadoAutor(){
         } else{
             return "não é negativo";
         }
+        // <p> Numero -10: <?=verificaNegativo(-10) Esse código dá erro ao usar indução de tipos  /  
+   
     }   
    ?>
    <p> Numero 10: <?=verificaNegativo(10)?> </p>
    <p> Numero -10: <?=verificaNegativo(-10)?> </p>
+
+
+    <!--  Refaturado  tirando p else -->    
+   <?php
+   function verificaNegativoo(int $valor):string{
+    //Isso é chamado de EARLY RETURN
+    // é possivel omitir o else neste caso
+    if($valor < 0){
+        return "é negativo";
+    } 
+        return "não é negativo";   
+}   
+?>
    
 
    

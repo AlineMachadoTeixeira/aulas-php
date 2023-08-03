@@ -103,6 +103,38 @@ function dadoAutor(){
    <p> <?=saudacaoo("bom dia" , "Melissa")?> </p>
    <p> <?=saudacaoo("boa noite" )?> </p>
     
+
+   <h2>Indução de tipos de dados</h2>
+   <?php
+    /* Tipos de dados mais comuns
+    string --> caracteres em geral
+    int --> número inteiro
+    float --> números com casas decimais 
+    array --> vetor  */
+
+    
+    // (int $valor) colocou o int para informar que o  $valor é um número inteiro
+
+    //Indução de tipos deve ser feita nos parâmetros e no retorno da função. 
+
+    // Isso auxiliará na entrada/saída correta dos dados manipulados pela função, além de melhorar as mensagens de erro quando ocorrem problemas.
+
+
+    function verificaNegativo(int $valor):string{
+        if($valor < 0){
+            return "é negativo";
+        } else{
+            return "não é negativo";
+        }
+    }   
+   ?>
+   <p> Numero 10: <?=verificaNegativo(10)?> </p>
+   <p> Numero -10: <?=verificaNegativo(-10)?> </p>
+   
+
+   
+
+
     
 </section>
 </body>

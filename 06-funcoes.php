@@ -34,10 +34,41 @@ function dadoAutor(){
     <?php
     function dadosCurso(){
         //return "Técnico em Informatica para Internet";
-        return "<b>No WhatsApp</b>";
+        return "<b>Back-end</b>";
     }
     ?>
     <p>Estamos no curso de <?=dadosCurso()?> é ministrado no Senac Penha.</p>
+
+    <h2>Função com parâmetros (ou argumentos)</h2>
+    <!-- Mesmo com o $ na soma($valor1, $valor2, $valor3) não é uma variável é um parâmetros -->
+    <?php
+    function soma($valor1, $valor2, $valor3){
+
+        //Variável de ESCOPO LOCAL
+        $total = $valor1 + $valor2 + $valor3;
+        return $total;
+    }
+    ?>
+    <!-- Chamando e exibindo diretamente o retorno -->
+    <p>Resultado 1: <?=soma(10, 20, 5)?></p>
+    <p>Resultado 2: <?=soma(23, 84, 1000.75)?></p>
+
+    <?php
+    //Chamando e guardando retorno
+    $resultado3 = soma (500, 480, 700);    
+    ?>
+    <p>Resultado 3: <?=$resultado3?></p>
+
+    <?php
+    if($resultado3 > 100){ 
+    ?> 
+
+    <p>Demitido!</p>
+
+    <?php
+    }    
+    ?>
+   
     
     
 </section>

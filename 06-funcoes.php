@@ -113,7 +113,7 @@ function dadoAutor(){
     array --> vetor  */
 
     
-    // (int $valor) colocou o int para informar que o  $valor é um número inteiro
+    // (int $valor) colocou o int para informar que o  $valor é um número inteiro e colocou o :string para dizer que a informação que vai sair é um texto. 
 
     //Indução de tipos deve ser feita nos parâmetros e no retorno da função. 
 

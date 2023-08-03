@@ -134,7 +134,7 @@ function dadoAutor(){
    <p> Numero -10: <?=verificaNegativo(-10)?> </p>
 
 
-    <!--  Refaturado  tirando p else -->    
+    <!--  Refaturado  tirando o else -->    
    <?php
    function verificaNegativoo(int $valor):string{
     //Isso é chamado de EARLY RETURN
@@ -145,7 +145,22 @@ function dadoAutor(){
         return "não é negativo";   
 }   
 ?>
+
+<hr>
+
+<h2>Função anônima ( ou closure, lambda)</h2>
+<?php
+$formataPreco = function(float $valor){
    
+   return  $precoFormatado = "R$ ".number_format($valor, 2 , "," , ".");  
+
+};
+
+?>
+
+<p>1000 formatado fica: <?= $formataPreco(1000)?> </p>
+   
+
 
    
 

@@ -63,12 +63,45 @@ function dadoAutor(){
     if($resultado3 > 100){ 
     ?> 
 
-    <p>Demitido!</p>
+    <p>Vicícius foi demitido!</p>
 
     <?php
     }    
     ?>
+
+    <!-- Usando uma função como parte de uma condição -->
+    <?php
+    if( soma(2, 3, 10) >= 10 ){
+    ?>
+
+    <p>Kaue Reprovado!</p>
+    
+    <?php
+    }
+    ?>
    
+
+   <h3>Função com parâmetros opcionais </h3>
+   <?php
+   function saudacao($mensagem, $pessoa){
+    return "Olá, $mensagem $pessoa! ";
+   }   
+   ?>
+
+   <p> <?=saudacao("bom dia" , "Melissa")?> </p>
+   <p> <?=saudacao("boa noite" , "Tanaka")?> </p>
+
+   <hr>
+
+   <!-- $pessoa é um parametro opcional com um valor padrão -->
+   <?php
+   function saudacaoo($mensagem, $pessoa = "Fulando(a)"){
+    return "Olá, $mensagem $pessoa! ";
+   }   
+   ?>
+
+   <p> <?=saudacaoo("bom dia" , "Melissa")?> </p>
+   <p> <?=saudacaoo("boa noite" )?> </p>
     
     
 </section>

@@ -77,9 +77,9 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
 <h2>2º parte Desafios com array</h2>
 
 <?php
-    function media(int $nota1, $nota2, $nota3):string{
+    function media(int $nota1, int $nota2, int $nota3):string{
 
-        //Variável de ESCOPO LOCAL
+        
         $nota = ($nota1 + $nota2 + $nota3) /3;
         return $nota;
     }

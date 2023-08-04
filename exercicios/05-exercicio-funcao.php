@@ -3,57 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Notas de um aluno </title>   
-        
-
+    <title>Exercício 05 Função</title>
+    <style>
+        .aprovado {
+            color: blue;
+        }
+        .reprovado {
+            color: red
+        }
     </style>
 </head>
 <body>
 
+<h2>1º parte</h2>
 
 <?php
- 
-   $alunos = ["Aline", "Beatriz", "Miguel"]; 
-  
-   function soma($nota1, $nota2, $nota3){
+$nota1 = 8;
+$nota2 = 10;
+$nota3 = 1;
 
-    //Variável de ESCOPO LOCAL
-    $nota = ($nota1 + $nota2 + $nota3) / 3;
-    return $nota;  
-    
-    
+$media = ($nota1 + $nota2 + $nota3) / 3;
+
+
+ $resultado = $media; 
+
+ if($media >= 7 ){
+    $resultado = "Aprovado";    
+            
+} else{
+    $resultado = "Reprovado"; 
+}
 
     
-        
+?> 
+
+<p> Sua madia é <?=$media?> e você está <?=$resultado?> </p> 
+
+<hr>
+
+<h2>2º parte</h2>
+
+<?php
+    function media($nota1, $nota2, $nota3){
+
+        //Variável de ESCOPO LOCAL
+        $nota = ($nota1 + $nota2 + $nota3) /3;
+        return $nota;
     }
 
+    function situacao(int  $nota):string{
+        //Isso é chamado de EARLY RETURN
+        // é possivel omitir o else neste caso
+        if( $nota > 7 ){
+            return "<b class='aprovado'>Aprovado</b>";
+        } 
+            return "<b class='reprovado'>Reprovado</b>";   
+    }   
+
+    ?>
     
-?>
-<?php
+    <p>Sua media é : <?=media(10, 8, 1)?> <?=situacao(7)?> </p> 
 
+    <hr>
 
-?>
+    <h2>3º parte</h2>
 
+    <?php
+    $clientes = 
+      [ 
+           "nome" => "Aline",
+           "Nota1" => 10,
+           "Nota2" => 10,
+           "Nota3" => 10,
 
-    
+           
+      ]
 
+      ?>
 
-<p>Aluno: <?= $alunos[0]?> com media de:<?=soma(2, 2, 5)?> </p>
-
-<p>Aluno: <?= $alunos[1]?> com media de: <?=soma(8, 5, 5)?></p>
-
-<p>Aluno: <?= $alunos[2]?> com media de: <?=soma(10, 10, 9)?> e você está </p>
-
-<?php
-
-?>
-
-
-
-
+   
 
 
 
-    
 </body>
 </html>

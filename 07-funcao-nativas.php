@@ -79,6 +79,42 @@ $textoBandas = implode(" - ", $bandas );
 <pre><?=var_dump($textoBandas)?></pre>
 
 
+<h3>extract()</h3>
+<?php
+/* Função que extrai chaves associativas para variáveis.  */
+$aluno = [
+    "id" => 1,
+    "nome" => "Chaves",
+    "idade" => 25,
+];
+extract($aluno)
+?>
+<!-- 
+    <ul>
+    <li>ID: <aluno['id']?></li>
+    <li>Nome:<$aluno['nome']?> </li>
+    <li>Idade:<$aluno['idade']?> </li>
+</ul>
+
+ERA ASSIM usando o extract ficou como a baixo
+
+ -->
+<ul>
+    <li>ID: <?=$id?></li>
+    <li>Nome:<?=$nome?> </li>
+    <li>Idade:<?=$idade?> </li>
+</ul>
+
+<h3>array_sum()</h3>
+<?php
+/* Função para somar os valores de um array */
+$total = array_sum($valores); //esse valores saiu da linha 60
+?>
+<p>Soma dos valores: <?=$total?></p>
+
+
+
+
 <h2>Filtro</h2>
 
 

@@ -54,6 +54,16 @@ $arrayLinquagens = explode(" - ", $linguagens)
 
 <hr>
 <h2>Numéricas</h2>
+<h3>min, max</h3>
+<?php
+/* Descobrir qual o maior e o menor valor */
+$valores = [10, 5, 50, 1000, 275];
+$valorQualquer = 1259.45;
+?>
+<p>Menor valor: <?=min($valores)?></p>
+<p>Maior valor: <?=max($valores)?></p>
+<!-- round é para arredondamento era 1259.45 ficou 1259  -->
+<p>Menor valor: <?=round($valorQualquer)?></p>
 
 
 <h2>Arrays</h2>

@@ -66,7 +66,17 @@ $valorQualquer = 1259.45;
 <p>Menor valor: <?=round($valorQualquer)?></p>
 
 
+<hr>
 <h2>Arrays</h2>
+<h3>implode()</h3>
+<?php
+/* Função que transforma um array em um string   */
+$bandas = ["Rush", "Slayer", "Dio"];
+//criar um caractere que quer ser usado para separar as bandas
+$textoBandas = implode(" - ", $bandas );
+?>
+<pre><?=var_dump($bandas)?></pre>
+<pre><?=var_dump($textoBandas)?></pre>
 
 
 <h2>Filtro</h2>

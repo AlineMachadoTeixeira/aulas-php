@@ -74,7 +74,7 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
 
 <hr>
 
-<h2>2º parte</h2>
+<h2>2º parte Desafios com array</h2>
 
 <?php
     function media(int $nota1, $nota2, $nota3):string{
@@ -92,15 +92,7 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
             return "<b class='reprovado'>Reprovado</b>";   
     }   
 
-    ?>
-    
-    <p>Sua media é : <?=media(10, 8, 1)?> <?=situacao(7)?> </p> 
-
-    <hr>
-
-    <h2>3º parte</h2>
-
-    
+    ?>   
 
     <table>
        <thead>

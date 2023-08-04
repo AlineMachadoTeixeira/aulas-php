@@ -13,17 +13,23 @@
 <body>
 
 <?php
-function calcularMedia( $n1, $n2 ){
+function calcularMedia( float $n1,  float $n2 ):float{
     $mediaaaa = ($n1 + $n2 ) / 2;
     return $mediaaaa;
 }
 
-function verificarSituacao ($valorMedia ){
-    if($valorMedia >= 7 ){
-        return "aprovado";
-    }else {
-        return "reprovado";
-    }
+function verificarSituacao (float $valorMedia ):string {
+    /* Sintaxe alternativa usando operador ternário  */
+    
+     return $valorMedia >= 7 ? "aprovado" : "reprovado";
+
+     
+       //Substituido pelo o de cima Operador Ternário. 
+   // if($valorMedia >= 7 ){
+        //return "aprovado";
+    //}else {
+        //return "reprovado";
+    //}
 
 }
 

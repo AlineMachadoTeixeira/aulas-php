@@ -13,13 +13,27 @@
 <h2>Strings</h2>
 <h3>trim()</h3>
 <?php
-/* Função que remove espaço antes e depois de strings(caractere). */
+/* Função que remove espaço antes e depois de strings/caractere. */
 $nome = "     Vinícius me deve 80 paçocas      ";
 $nomeSemEspaco = trim($nome);
 ?>
 
 <pre> <?=var_dump($nome)?></pre>
 <pre> <?=var_dump($nomeSemEspaco)?> </pre>
+
+
+<h3>str_reaplace()</h3>
+<?php
+/* Função que permite substituição de strings/caracteres. Exemplos tirar palavras inadequada*/
+$fraseFeia = "Fulando é um bobão e xarope";
+$fraseBunitinha = str_replace(
+    ["xarope", "bobão"], 
+    "*****",
+    $fraseFeia
+);
+?>
+<p><?=$fraseFeia?></p>
+<p><?=$fraseBunitinha?></p>
 
 
 <hr>

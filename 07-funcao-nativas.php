@@ -36,6 +36,22 @@ $fraseBunitinha = str_replace(
 <p><?=$fraseBunitinha?></p>
 
 
+
+<h3>explode()</h3>
+<?php
+/* Função que transforma uma string em um array */
+$linguagens = "HTML - CSS - JS - PHP";
+$arrayLinquagens = explode(" - ", $linguagens)
+?>
+<!-- com  pre visualização mais detalhada -->
+<pre><?=var_dump($linguagens)?></pre>
+<pre><?=var_dump($arrayLinquagens)?></pre>
+
+<!-- sem pre -->
+<p><?=var_dump($linguagens)?>/p>
+<p><?=var_dump($arrayLinquagens)?></p>
+
+
 <hr>
 <h2>Numéricas</h2>
 

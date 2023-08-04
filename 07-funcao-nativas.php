@@ -114,6 +114,20 @@ $total = array_sum($valores); //esse valores saiu da linha 60
 
 
 
+<h3>array_unique()</h3>
+<?php
+/* Função que retorna um novo array com dados únicos no deixa repetir*/
+$produtos = ["TV", "Notebook", "TV", "Geladeira", "Monitor", "Notebook", "Teclado", "Mouse"
+];
+
+$produtosUnicos = array_unique($produtos);
+?>
+
+<pre><?=var_dump($produtos)?></pre>
+<pre><?=var_dump($produtosUnicos)?></pre>
+
+
+
 
 <h2>Filtro</h2>
 

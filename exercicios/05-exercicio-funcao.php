@@ -11,6 +11,39 @@
         .reprovado {
             color: red
         }
+       
+        body{
+            background-color: antiquewhite;    
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     
+        }
+
+        table{
+              margin: auto;
+              width: 80%;
+              max-width: 700px; 
+              border-collapse: collapse;          
+               
+         
+        }
+
+        caption{          
+              font-size: 30px;
+              padding: 5px;              
+        }
+
+        th{
+            background-color: #000000;
+            color: #fff;
+            
+        }
+
+        th, td{ 
+            padding: 5px;
+            font-size: 20px; 
+            text-align: center; 
+            border: 1px solid; 
+                
+        }
     </style>
 </head>
 <body>
@@ -44,7 +77,7 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
 <h2>2º parte</h2>
 
 <?php
-    function media($nota1, $nota2, $nota3){
+    function media(int $nota1, $nota2, $nota3):string{
 
         //Variável de ESCOPO LOCAL
         $nota = ($nota1 + $nota2 + $nota3) /3;
@@ -52,8 +85,7 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
     }
 
     function situacao(int  $nota):string{
-        //Isso é chamado de EARLY RETURN
-        // é possivel omitir o else neste caso
+        
         if( $nota > 7 ){
             return "<b class='aprovado'>Aprovado</b>";
         } 
@@ -68,18 +100,80 @@ $media = ($nota1 + $nota2 + $nota3) / 3;
 
     <h2>3º parte</h2>
 
+    
+
+    <table>
+       <thead>
+          <tr>
+               <!-- th é a celula de cabeçalho (th) -->
+               <th>Aluno</th>
+               <th>1º nota</th>
+               <th>2º nota</th>
+               <th>3º nota</th>
+               <th>Media</th>
+               <th>Situação</th>
+          </tr>
+       </thead>
+
     <?php
-    $clientes = 
-      [ 
-           "nome" => "Aline",
-           "Nota1" => 10,
-           "Nota2" => 10,
-           "Nota3" => 10,
 
-           
-      ]
+    $alunos = [
+       [ 
+          "aluno" => "Lucas",
+          "nota1" => 10,
+          "nota2" => 10,
+          "nota3" => 10          
+       ],
 
-      ?>
+       [ 
+         "aluno" => "Bruno",
+         "nota1" => 7,
+         "nota2" => 1,
+         "nota3" => 10          
+       ],
+
+       [ 
+        "aluno" => "Laís",
+        "nota1" => 8,
+        "nota2" => 7,
+        "nota3" => 3,          
+       ],
+
+       [ 
+        "aluno" => "Ana",
+        "nota1" => 10,
+        "nota2" => 10,
+        "nota3" => 10,   
+       ]    
+
+
+    ];    
+    foreach ($alunos as $aluno){       
+    
+    ?> 
+    
+       <tr>
+             <td><?=$aluno["aluno"]?></td>
+             <td><?=$aluno["nota1" ]?></td>
+             <td><?=$aluno["nota2" ]?></td>
+             <td><?=$aluno["nota3" ]?></td>
+             <td><?=media($aluno["nota1"], $aluno["nota2"], $aluno["nota3"])?></td>
+             <td><?=situacao(media($aluno["nota1"], $aluno["nota2"], $aluno["nota3"]))?></td>
+                            
+        </tr> 
+    
+    
+    <?php
+    
+    }    
+    ?>
+
+    </table> 
+
+    
+
+    
+      
 
    
 

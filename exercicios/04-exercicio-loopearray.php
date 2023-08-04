@@ -14,6 +14,7 @@
               margin: auto;
               width: 80%;
               max-width: 700px; 
+              border-collapse: collapse;
                
          
         }

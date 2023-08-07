@@ -196,7 +196,6 @@ if (password_verify($senhaDigitada, $senhaSegura) ) {
 } else{
     echo "senha errada, vaza daqui!";
 }
-
 ?>
 
 

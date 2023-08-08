@@ -1,10 +1,13 @@
 
-<!-- Recuperar/ descobrir qual nome da página  aberta no momento-->
+<!-- Recuperar/ descobrir qual nome da página  aberta no momento esse match só pode ser usado no PHP 8-->
 <?php
 $pagina = basename($_SERVER ['PHP_SELF']);
 
-switch ($pagina){
-    case "index.php"; $titulo = "Página Inicial"; break;
+$titulo = match ($pagina){
+    "index.php" => "Página inicial",
+    "cursos.php" => "Cursos",
+    "duvidas.php" => "Duvidas",
+    "contato.php" => "Contatos"
 }
 ?>
 <!DOCTYPE html>

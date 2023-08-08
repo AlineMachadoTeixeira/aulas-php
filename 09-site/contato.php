@@ -1,5 +1,5 @@
 <?php
-$titulo = "Contato";
+
 require "includes/header.php"
 ?>
 

@@ -12,6 +12,7 @@
     $hora = date("H:i:s");
     ?>
 
+    <p> <time><?= $data ?> <?= $hora ?> </time></p> <!-- time é uma tag semantica para hora  -->
     <p>Data: <?= $data ?> as <?= $hora ?> horário de São Paulo </p>
 
 </footer>

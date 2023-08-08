@@ -1,4 +1,5 @@
 <?php
+$titulo = "Duvidas";
 require "includes/header.php"
 ?>
 

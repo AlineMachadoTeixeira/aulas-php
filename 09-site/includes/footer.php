@@ -3,9 +3,7 @@
 <footer>
     <p>Site criado para o curso <b>Téc. Informatica para Internet</b></p>
 
-
-    <?php
-    // $data = "18/07/2023";
+    <?php  
 
     // Definindo fuso horário (timezone)
     date_default_timezone_set("America/Sao_Paulo");

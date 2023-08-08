@@ -1,4 +1,5 @@
 <?php
+$titulo = "Página Inicial";
 require "includes/header.php"
 ?>
 

@@ -1,26 +1,25 @@
 </main>
 
-    <footer>
-        <p>Site criado para o curso <b>Téc. Informatica para Internet</b></p>
-        
-
-        <?php
-        //Variavel HORAS
-        $hora = date("H:i:s");  //h:horas - i:minutos - s:segundos
-        //Data Para Constante faz assim:
-        define("DATA", date("d/m/Y"));
-        echo DATA;
-
-        echo "<br>"; //para mostrar a hora
-        echo "Hora: $hora";
-        echo "<br><br>";
-        
-        ?>
-
-        
-    </footer>
+<footer>
+    <p>Site criado para o curso <b>Téc. Informatica para Internet</b></p>
 
 
-    
+    <?php
+    // $data = "18/07/2023";
+
+    // Definindo fuso horário (timezone)
+    date_default_timezone_set("America/Sao_Paulo");
+
+    $data = date("d/m/Y");
+    $hora = date("H:i:s");
+    ?>
+
+    <p>Data: <?= $data ?> as <?= $hora ?> horário de São Paulo </p>
+
+</footer>
+
+
+
 </body>
+
 </html>

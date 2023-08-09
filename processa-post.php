@@ -29,21 +29,35 @@
       $mensagem = $_POST["mensagem"];
       $idade = $_POST["idade"];
 
-      /*  Exercício se houver interesses (ou seja, foi selecionado pelo menos 1), guarde na variavel o $_POST["interesses"]. Caso contrário, guarde na varuiavel um array vazio  ISSET  */
-      $interesses = $_POST["interesses"]
-   ?>  
+      /* Exercício linha 39 pelo professor
+      * SOLUÇÃO USANDO OPERADOR DE   COALESCÊNCIA: ??
 
+      $interesses = $_POST["interesses"] ?? []; 
+       */
+
+
+      /*  Exercício se houver interesses (ou seja, foi selecionado pelo menos 1), guarde na variavel o $_POST["interesses"]. Caso contrário, guarde na varuiavel um array vazio  ISSET   depois em baixo que fazer isso faz igual a linha 56 para o exercício funcionar */  
+      if (isset ($_POST["interesses"]) ){    
+      $interesses = $_POST["interesses"]; 
+      }else{
+        $interesses = [];
+      }
+      ?>  
 
     <h2>Dados:</h2>
 
     <ul>
         <li>Nome: <?=$nome?> </li>
         <li>E-mail: <?=$email?> </li>
-        <li>Idade: <?=$idade?> </li>        
-        <li>Interesses: <?= implode(", " , $interesses)?> </li>
+        <li>Idade: <?=$idade?> </li>  
+
+        <?php 
+        if ( !empty ($interesses) ){ ?>
+        <li>Interesses: <?= implode(", " , $interesses)?></li>    
+        <?php }?>        
 
         <!-- Falar para o PHP que essa mensagem só vai aparecer se não tiver vazia -->
-        <!-- Se a variavel mensagem NÃO ESTIVER VAZIA, mostre o li com a mensagem  usameos o !empty para não mostrar a mensagemm, pois o ! é o oerador não-->
+        <!-- Se a variavel mensagem NÃO ESTIVER VAZIA, mostre o li com a mensagem  usameos o !empty para não mostrar a mensagemm, pois o ! é o operador não-->
         <?php if ( !empty ($mensagem)){ ?>
         <li>Mensagem:<?=$mensagem?> </li>
         <?php }?>
@@ -51,8 +65,8 @@
     </ul>
    <?php
    }
-   ?>
-  
+   ?>  
     
 </body>
 </html>
+ 

@@ -23,25 +23,47 @@
 
    <?php 
    } else{
-    
-      $nome = $_POST["nome"];
-      $email = $_POST["email"];
-      $mensagem = $_POST["mensagem"];
-      $idade = $_POST["idade"];
+       /* Não deixar a pessoas escrever qualquer coisa no nome do fornulário pode usar o filter_var( $_POST["nome"] ou filter_input(INPUT_POST, "nome", */
+      //$nome = $_POST["nome"]; Tiramos esse, pois não é seguro
+      //$nome = filter_var( $_POST["nome"],  FILTER_SANITIZE_SPECIAL_CHARS);
+      $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+      //$email = $_POST["email"];  Tiramos esse, pois não é seguro     
+       $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+
+
+      //$mensagem = $_POST["mensagem"]; Tiramos esse, pois não é seguro
+      $mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+      //$idade = $_POST["idade"]; Tiramos esse, pois não é seguro
+      $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
+
+      
+
+      //$interesses = $_POST["interesses"] ?? []; Tiramos esse, pois não é seguro 
+      $interesses =  filter_var_array($_POST["interesses"] ?? [], FILTER_SANITIZE_SPECIAL_CHARS
+    );
+     
+
+
+
 
       /* Exercício linha 39 pelo professor
       * SOLUÇÃO USANDO OPERADOR DE   COALESCÊNCIA: ??
-
-      $interesses = $_POST["interesses"] ?? []; 
+      $interesses = $_POST["interesses"] ?? []  usei do professor ; 
        */
 
 
-      /*  Exercício se houver interesses (ou seja, foi selecionado pelo menos 1), guarde na variavel o $_POST["interesses"]. Caso contrário, guarde na varuiavel um array vazio  ISSET   depois em baixo que fazer isso faz igual a linha 56 para o exercício funcionar */  
-      if (isset ($_POST["interesses"]) ){    
-      $interesses = $_POST["interesses"]; 
-      }else{
-        $interesses = [];
-      }
+
+
+      /*  Exercício se houver interesses (ou seja, foi selecionado pelo menos 1), guarde na variavel o $_POST["interesses"]. Caso contrário, guarde na varuiavel um array vazio  ISSET   depois em baixo que fazer isso faz igual a linha 78 para o exercício funcionar */  
+     // if (isset ($_POST["interesses"]) ){    
+      //$interesses = $_POST["interesses"]; 
+      //}else{
+       // $interesses = [];
+     // }
       ?>  
 
     <h2>Dados:</h2>

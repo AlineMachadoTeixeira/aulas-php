@@ -53,7 +53,20 @@
 
         <?php 
         if ( !empty ($interesses) ){ ?>
-        <li>Interesses: <?= implode(", " , $interesses)?></li>    
+        <li>Interesses: <?= implode(", " , $interesses)?></li>  <!-- Linha 56 versão 1:
+            Transformando o $interesses em string  --> 
+        
+        <!-- Versão 2: 
+            acessando cada interesse existente no array usando loop -->
+        <li>Interesses: 
+            <ul>
+                <?php foreach ( $interesses as  $interesse) {?>
+                <li><?=$interesse?></li>
+                <?php } ?>
+            </ul>
+        </li>  
+
+
         <?php }?>        
 
         <!-- Falar para o PHP que essa mensagem só vai aparecer se não tiver vazia -->

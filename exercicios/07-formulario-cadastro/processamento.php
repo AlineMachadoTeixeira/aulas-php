@@ -10,7 +10,7 @@
 
 <body>
 
-<!-- Faltou só um título/h1 aqui -->
+<h1>Cadastro realizado</h1>
 
     <?php
 

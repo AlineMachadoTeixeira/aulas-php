@@ -10,6 +10,7 @@
 
 <body>
 
+<!-- Faltou só um título/h1 aqui -->
 
     <?php
 
@@ -25,6 +26,9 @@
 
         $fornecedor = filter_input(INPUT_POST, "fornecedores", FILTER_SANITIZE_SPECIAL_CHARS);
 
+        /* Aqui no $preco, o ideal é sanitizar em vez de validar.
+        Você deverá usar dois filtros: um para sanitização de float e outro para permitir dígitos/casas
+        decimais. */
         $preco = filter_input(INPUT_POST, "preco", FILTER_VALIDATE_FLOAT);
 
         $disponibilidade = filter_input(INPUT_POST, "disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);

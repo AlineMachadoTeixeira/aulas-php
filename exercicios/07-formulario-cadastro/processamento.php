@@ -25,7 +25,7 @@
 
         $fornecedor = filter_input(INPUT_POST, "fornecedores", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_FLOAT);
+        $preco = filter_input(INPUT_POST, "preco", FILTER_VALIDATE_FLOAT);
 
         $disponibilidade = filter_input(INPUT_POST, "disponibilidade", FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -44,7 +44,7 @@
 
         <?php
         if (!empty ($descricao)) { ?>
-            <li>Descrição:<?= $disponibilidade?> </li>
+            <li>Descrição:<?= $descricao?> </li>
         <?php
         }
         ?>

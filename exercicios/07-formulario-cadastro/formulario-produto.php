@@ -33,6 +33,8 @@
                <?php
                $fornecedores = ["Samsung", "LG", "Philips", "Philco"];
 
+               /* Correto! Numa situação real, o value do option seria um código
+               identificador de cada fornecedor (algo que viria do banco de dados) */
                foreach ($fornecedores as $fornecedor) {
                ?>
                   <option value="<?= $fornecedor ?>"><?= $fornecedor ?></option >

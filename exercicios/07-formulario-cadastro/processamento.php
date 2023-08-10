@@ -36,6 +36,7 @@
         <ul>
             <li>Produto: <?= $produto ?></li>
             <li>Fornecedores: <?= $fornecedor ?></li>
+            <li>Disponível: <?= $disponibilidade ?></li>
             <li>Preço:<?= number_format($preco, 2, ',', '.') ?> </li>
 
     <?php

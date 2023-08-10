@@ -65,8 +65,8 @@
 
          <!-- Descrição -->
          <p class="campo">
-            <label for="descricao ">Descrição (mínimo de 5 e máximo de 50)</label> <br>
-            <textarea  minlength="5" maxlength="50" name="descricao" id="descricao" cols="35" rows="6"></textarea>
+            <label for="descricao ">Descrição</label> <br>
+            <textarea  name="descricao" id="descricao" cols="35" rows="6"></textarea>
          </p>
          
 
